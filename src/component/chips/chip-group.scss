@@ -1,0 +1,36 @@
+.chip-group {
+  height: 100%;
+  width: 420px;
+  display: flex;
+  flex-direction: column;
+
+  @mixin chips {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  &-selected-chips {
+    @include chips;
+  }
+
+  &-chips {
+    @include chips;
+
+    &-wrapper {
+      width: 100%;
+      flex: 1 1 auto;
+      overflow-y: auto;
+      overflow-x: hidden;
+      display: inline-block;
+    }
+  }
+
+  &-chip-wrapper {
+    padding: 5px 10px 5px 0;
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}

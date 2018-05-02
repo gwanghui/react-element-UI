@@ -1,0 +1,101 @@
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+.small-input {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+
+  &::placeholder {
+    color: #c7c7c7;
+  }
+
+  &__label {
+    font-size: 11px;
+    width: 43%;
+
+    &-ico {
+      @include info-icon;
+      margin: 0 0 -2px 8px;
+      width: 14px;
+      height: 14px;
+      display: inline-block;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    font-size: 12px;
+    display: inline-flex;
+    color: $color-primary-text;
+  }
+
+  &__input {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: 1px solid $color-line-main;
+    box-sizing: border-box;
+    font-size: 13px;
+    text-align: left;
+
+    &:focus {
+      @extend .small-input__input;
+      border: 1px solid $color-light-purple;
+      outline: none;
+    }
+
+    &::placeholder {
+      color: #bbbbbb;
+      font-weight: lighter;
+    }
+
+    &--error {
+      @extend .small-input__input;
+      border: 1px solid $color-invalid;
+      outline: none;
+
+      &:focus {
+        @extend .small-input__input;
+        border: 1px solid $color-invalid;
+        outline: none;
+      }
+    }
+
+    &--dim {
+      @extend .small-input__input;
+      background-color: $color-dim-bg;
+      outline: none;
+      cursor: default;
+
+      &::placeholder {
+        color: #bbbbbb;
+        font-weight: lighter;
+      }
+    }
+  }
+
+  &__verifiedText {
+    height: 100%;
+    color: $color-accent-text;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  &__errorText {
+    height: 100%;
+    color: $color-invalid;
+    font-size: 12px;
+    /*white-space: nowrap;*/
+  }
+
+  &__unit {
+    position: absolute;
+    right: 10px;
+    top: 6px;
+    font-size: 13px;
+  }
+}

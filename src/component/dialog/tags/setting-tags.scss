@@ -1,0 +1,110 @@
+.setting-tags {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: -40px;
+
+  &-body {
+    height: 100%;
+
+    & > .default-dialog-header {
+      position: relative;
+      z-index: 3;
+    }
+  }
+
+  &-left {
+    float: left;
+    width: 500px;
+    height: 500px;
+    padding: 50px 40px;
+  }
+
+  &-right {
+    float: right;
+    width: 415px;
+    height: 500px;
+    padding-top: 45px;
+    padding-bottom: 50px;
+    background-color: $color-setting-tags-background;
+
+    &-body {
+      width: 100%;
+      height: 384px;
+      padding: 0 40px;
+      overflow-y: auto;
+    }
+
+    &-footer {
+      display: flex;
+      justify-content: space-between;
+      width: 345px;
+      height: 30px;
+      margin-top: 15px;
+      margin-left: 34px;
+    }
+  }
+
+  &--dragging {
+    position: fixed;
+    height: 28px;
+    left: -2000px;
+    top: -2000px;
+  }
+}
+
+.dragging-tags {
+  margin-bottom: 20px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &__title {
+    font-size: 14px;
+    color: $color-system;
+    padding-bottom: 12px;
+    user-select: none;
+  }
+
+  &__area {
+    display: inline-block;
+    width: 100%;
+    min-height: 75px;
+    max-height: 150px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: $color-reversed;
+    padding: 7px 7px 2px 2px;
+
+    &--dimmed {
+      @extend .dragging-tags__area;
+      background-color: $color-line-sub;
+      pointer-events: none;
+    }
+
+    &--selected {
+      @extend .dragging-tags__area;
+      outline: 1px solid $color-light-purple;
+    }
+  }
+
+  &__placeholder {
+    @include align-center-both;
+    width: 100%;
+    height: 60px;
+    font-size: 13px;
+    color: $color-dim;
+  }
+
+  & > div > .chip-wrapper {
+    display: inline-block;
+    max-width: 100%;
+    margin-left: 5px;
+    margin-bottom: 5px;
+
+    & > div {
+      width: auto !important;
+    }
+  }
+}

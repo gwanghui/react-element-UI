@@ -1,0 +1,22 @@
+.slider {
+  @include size(100%);
+
+  & > div > div {
+    height: 6px !important;
+    & div:nth-child(1) {
+      border-radius: 100px;
+    }
+
+    & div:nth-child(2) {
+      border-radius: 100px;
+      background-color: #e1e1e3 !important;
+    }
+
+    & div:nth-child(3) {
+      width: 13px !important;
+      height: 13px !important;
+      margin-top: 3px !important;
+    }
+  }
+}
+

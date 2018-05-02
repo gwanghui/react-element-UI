@@ -1,0 +1,59 @@
+@mixin drop-down-arrow {
+  position: absolute;
+  right: 13px;
+  top: calc(50% - 8px);
+  transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+}
+
+.arrow-ascending {
+  @include arrow-ascending;
+  @include size(10px, 15px);
+  @include drop-down-arrow;
+}
+
+.arrow-descending {
+  @include arrow-descending;
+  @include size(10px, 15px);
+  @include drop-down-arrow;
+}
+
+.drop-down-menu__input {
+  position: relative;
+  width: calc(100% - 23px);
+  height: 100%;
+  margin: 0 0 0 15px;
+  line-height: 40px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #d8d8d8;
+
+  &-wrapper {
+    position: absolute;
+    top: 5px;
+    width: calc(100% - 7px);
+    height: 41px;
+    background-color: white;
+    z-index: 1;
+  }
+
+  &::placeholder {
+    color: $color-dim;
+  }
+}
+
+.drop-down-menu__placeholder {
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: $color-dim;
+  padding-left: 12px;
+
+  > div {
+    position: relative;
+    top: 50%;
+    font-size: 13px;
+    transform: translateY(-50%);
+  }
+}

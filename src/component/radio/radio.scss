@@ -1,0 +1,19 @@
+.radio-on {
+  @include radio-on;
+}
+
+.radio-off {
+  @include radio-off;
+}
+
+.radio-group > div:hover .radio-off{
+  @include radio-hover;
+}
+
+.radio-on__dimmed {
+  @include radio-on__dimmed;
+}
+
+.radio-off__dimmed {
+  @include radio-off__dimmed;
+}

@@ -1,0 +1,43 @@
+.folder-navigator {
+  width: 100%;
+  border: solid 1px $color-primary-text;
+  opacity: 1;
+  transition: visibility 0s, opacity .3s;
+  background-color: white;
+  padding: 10px 0;
+
+  &-wrapper {
+    position: absolute;
+    width: 400px;
+    z-index: 9999;
+  }
+
+  &__item {
+    height: 30px;
+    align-content: center;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(153, 153, 153, 0.1);
+    }
+
+    &-icon {
+      @include folder-navigator;
+      width: 19px;
+      height: 30px;
+      display: inline-block;
+    }
+
+    &-name {
+      @include align-center-vertical;
+      line-height: 30px;
+      font-size: 13px;
+      padding-left: 15px;
+      display: inline-block;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+  }
+}

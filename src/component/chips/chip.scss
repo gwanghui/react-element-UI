@@ -1,0 +1,6 @@
+.chip-wrapper > div > svg {
+  fill-opacity: 0.5;
+  &:hover {
+    fill-opacity: 0.8;
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "name": "react-element-UI",
+  "version": "0.131.3",
+  "description": "ReAct Elements Module.",
+  "main": "index.js",
+  "scripts": {
+    "sonar": "./node_modules/sonarqube-scanner/dist/bin/sonar-scanner -Dsonar.host.url=http://192.168.10.122:9000 -Dsonar.javascript.lcov.reportPath=coverage/lcov.info -Dsonar.sources=./src",
+    "coverage": "./node_modules/.bin/nyc --reporter='json-summary' --reporter='html' --reporter='lcov' ./node_modules/.bin/mocha -r babel-core/register -r babel-polyfill -r jsdom-global/register -r ignore-styles -r babel-hook.js -r spec/setupTests.js \"spec/**/*-spec.js\"",
+    "test": "./node_modules/.bin/mocha -r babel-core/register -r babel-polyfill -r jsdom-global/register -r ignore-styles -r babel-hook.js -r spec/setupTests.js \"spec/**/*-spec.js\""
+  },
+  "publishConfig": {
+    "registry": "http://nexus.sds-act.com/repository/npm-private/"
+  },
+  "keywords": [
+    "nexshop",
+    "elements"
+  ],
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "chai": "^4.1.0",
+    "core-decorators": "^0.20.0",
+    "css-loader": "^0.28.4",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "ignore-styles": "^5.0.1",
+    "jsdom": "^11.2.0",
+    "jsdom-global": "^3.0.2",
+    "mocha": "^3.4.2",
+    "mockdate": "^2.0.2",
+    "moment": "^2.20.0",
+    "moment-timezone": "^0.5.13",
+    "node-sass": "^4.5.3",
+    "nyc": "^11.2.1",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-test-renderer": "^16.3.2",
+    "sass-loader": "^6.0.6",
+    "sinon": "^2.4.1",
+    "sonarqube-scanner": "^2.0.2",
+    "style-loader": "^0.18.2"
+  },
+  "author": "X-men",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "material-ui": "^0.20.0",
+    "moment-timezone": "^0.5.14",
+    "react-color": "^2.14.0",
+    "react-day-picker": "^7.0.5",
+    "react-highlight-words": "^0.10.0",
+    "react-panelgroup": "1.0.5"
+  }
+}

@@ -1,0 +1,18 @@
+.back-button {
+  &-wrapper {
+    @include size(35px);
+    @include align-center-both;
+
+    &:hover {
+      @include cubic-transition(all);
+      background-color: $color-hover-background;
+      border-radius: 50px;
+    }
+  }
+
+  &-icon {
+    @include size(25px);
+    @include arrow-left;
+    cursor: pointer;
+  }
+}

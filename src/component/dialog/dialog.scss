@@ -1,0 +1,23 @@
+@import "views/message-body";
+@import "create-with-resolution-view/create-with-resolution-view";
+
+.default-dialog {
+  &-header {
+    height: 40px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+
+    &__close {
+      @include cross-button;
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+    }
+  }
+}
+
+.dialog-paper {
+  height: 100%;
+  border: solid 1px #666666;
+}

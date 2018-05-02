@@ -1,0 +1,45 @@
+.tagging-board {
+  height: 100%;
+  width: 420px;
+  display: flex;
+  flex-direction: column;
+
+  &-header {
+    height: 60px;
+    color: $color-system;
+
+    &__title {
+      @include align-center-vertical;
+      height: 19px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    &__sub-title {
+      @include align-center-vertical;
+      height: 19px;
+      padding-top: 2px;
+      font-size: 12px;
+    }
+  }
+
+  &-search {
+    width: 100%;
+    height: 48px;
+    padding-bottom: 8px;
+  }
+
+  &__empty-items-text {
+    @include align-center-both;
+    flex: 0 1 120px;
+    font-size: 13px;
+    color: $color-dim;
+  }
+
+  &__empty-search-result-text {
+    @include align-center-both;
+    flex: 0 1 120px;
+    font-size: 16px;
+    color: $color-body-guide;
+  }
+}

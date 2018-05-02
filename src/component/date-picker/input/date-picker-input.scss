@@ -1,0 +1,51 @@
+@mixin date {
+  @include align-between-horizontal;
+  align-items: center;
+  width: 130px;
+  height: 35px;
+  cursor: pointer;
+}
+
+@mixin input-calendar {
+  @include calendar;
+  @include size(20px);
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.date-picker-input {
+  @include date;
+  color: $color-black-text;
+  border: solid 1px $color-line-main;
+  background-color: white;
+
+  &__focus {
+    @include date;
+    border: solid 1px #5c65c0;
+    background-color: white;
+  }
+
+  &--dim {
+    @include date;
+    background-color: $color-dim-bg;
+    border: solid 1px $color-line-sub;
+    color: $color-info-text;
+    pointer-events: none;
+  }
+
+  &__value {
+    padding: 0 0 0 10px;
+    font-size: 13px;
+    text-align: left;
+    width: 88px;
+  }
+
+  &__calendar {
+    @include input-calendar;
+
+    &--dim {
+      @include input-calendar;
+      opacity: .3;
+    }
+  }
+}

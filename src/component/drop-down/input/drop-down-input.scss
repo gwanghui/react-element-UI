@@ -1,0 +1,36 @@
+.drop-down-input {
+  @include align-center-vertical;
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 12px;
+  padding-right: 7px;
+  cursor: pointer;
+  background-color: $color-reversed;
+  border: solid 1px $color-line-main;
+
+  &__label {
+    height: 30px;
+    border: none;
+    cursor: inherit;
+    font-size: 13px;
+
+    &::placeholder {
+      color: $color-info-text;
+    }
+  }
+
+  &__arrow {
+    &--ascending {
+      @include arrow-ascending;
+      @include size(10px, 15px);
+      transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    }
+
+    &--descending {
+      @include arrow-descending;
+      @include size(10px, 15px);
+      transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    }
+  }
+}

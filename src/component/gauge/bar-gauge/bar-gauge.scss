@@ -1,0 +1,46 @@
+.bar-gauge {
+  @include align-center-both;
+
+  &-wrapper {
+    display: flex;
+    position: relative;
+    align-items: flex-end;
+    padding-left: 3px;
+    padding-bottom: 3px;
+  }
+
+  &-background {
+    width: 31px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 13px;
+    border: solid 3px #eceff4;
+  }
+
+  &-body {
+    width: 25px;
+    border: 3px solid transparent;
+    border-radius: 13px;
+    background-color: #70c8be;
+    transition: all 450ms;
+  }
+
+  &-description {
+    @include align-center-both;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 14px;
+  }
+
+  &__value {
+    font-size: 18px;
+    font-weight: 900;
+  }
+
+  &__text {
+    font-size: 12px;
+  }
+}

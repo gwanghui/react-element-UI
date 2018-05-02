@@ -1,0 +1,40 @@
+@mixin time-picker__input {
+  @include cubic-transition('all', 1000ms);
+  @include align-center-vertical;
+  width: 115px;
+  height: 30px;
+  border: solid 1px $color-line-main;
+  background-color: $color-reversed;
+}
+
+.elements-time-picker {
+  height: 50px;
+
+  &__input {
+    @include time-picker__input;
+
+    &--focus {
+      @include time-picker__input;
+      border: solid 1px #5c65c0;
+    }
+
+    &--error {
+      @include time-picker__input;
+      border: solid 1px $color-warning-border;
+    }
+
+    &--dim {
+      @include time-picker__input;
+      background-color: $color-dim-bg;
+      border: solid 1px $color-line-sub;
+      color: $color-info-text;
+      pointer-events: none;
+    }
+  }
+
+  &__error-message {
+    height: 20px;
+    font-size: 12px;
+    color: $color-invalid;
+  }
+}

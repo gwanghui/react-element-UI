@@ -1,0 +1,11 @@
+.spinner-wrapper {
+  @include align-center-both;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  min-height: 100vh;
+  height: 100%;
+  z-index: 9999;
+  background-color: rgba(255, 255, 255, 0.5);
+}

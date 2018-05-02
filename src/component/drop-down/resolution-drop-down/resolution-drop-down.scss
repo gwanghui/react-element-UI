@@ -1,0 +1,261 @@
+@mixin resolution-drop-down-arrow {
+  position: absolute;
+  top: calc(50% - 8px);
+  transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+}
+
+.resolution-drop-down {
+  @include align-center-vertical;
+  position: relative;
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  text-align: left;
+  background-color: white;
+  border: 0 solid #d8d8d8;
+  border-bottom-width: 1px;
+  cursor: pointer;
+
+  &--disabled {
+    @extend .resolution-drop-down;
+
+    cursor: default;
+  }
+
+  label {
+    cursor: pointer;
+  }
+
+  &-selected {
+    @include align-center-vertical;
+
+    &__title {
+      width: 55px;
+      height: 30px;
+      line-height: 31px;
+      font-size: 16px;
+      text-align: left;
+      color: #333333;
+
+      &--disabled {
+        @extend .resolution-drop-down-selected__title;
+
+        color: $color-dim;
+        font-weight: 400;
+        cursor: default !important;
+      }
+
+    }
+
+    &__resolution {
+      width: 67px;
+      height: 30px;
+      line-height: 30px;
+      margin-left: 15px;
+      font-size: 13px;
+      text-align: left;
+      color: #aaaaaa;
+
+      &--disabled {
+        @extend .resolution-item__resolution;
+        color: $color-dim;
+        font-weight: 400;
+        cursor: default !important;
+      }
+
+    }
+
+    &__vertical {
+      @include resolution-vertical;
+      @include screen-icon;
+      margin-left: 94px;
+
+      &--disabled {
+        @extend .resolution-drop-down-selected__vertical;
+        opacity: 0.3;
+        cursor: default;
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
+
+    &__horizontal {
+      @include resolution-horizontal;
+      @include screen-icon;
+      margin-left: 94px;
+
+      &--disabled {
+        @extend .resolution-drop-down-selected__horizontal;
+        opacity: 0.3;
+        cursor: default;
+
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  &__placeholder {
+    color: #999999;
+    width: 100%;
+  }
+
+  &__arrow {
+    @include size(24px, 24px);
+    padding-left: 1px;
+
+    &:hover {
+      border-radius: 12px;
+      background-color: $color-hover-background;
+    }
+
+    &--disabled {
+      @extend .resolution-drop-down__arrow;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+
+    &--ascending {
+      @include arrow-ascending;
+      @include size(10px, 15px);
+      @include resolution-drop-down-arrow;
+    }
+
+    &--descending {
+      @include arrow-descending;
+      @include size(10px, 15px);
+      @include resolution-drop-down-arrow;
+    }
+  }
+}
+
+.resolution-menu {
+  border: solid 1px $color-system;
+  background-color: white;
+  opacity: 1;
+  z-index: 9999;
+  position: absolute;
+  left: 90px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.resolution-item {
+  @include align-center-vertical;
+  height: 60px;
+  margin: 0 20px;
+  border-bottom: 1px solid $color-line-sub;
+
+  &__title {
+    width: 65px;
+    height: 30px;
+    line-height: 31px;
+    font-size: 16px;
+    text-align: left;
+    color: $color-primary-text;
+    padding-left: 10px;
+
+    &--disabled {
+      @extend .resolution-item__title;
+      color: $color-dim;
+      font-weight: 400;
+    }
+  }
+
+  &__resolution {
+    width: 67px;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 15px;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: left;
+    color: #aaaaaa;
+
+    &--disabled {
+      @extend .resolution-item__resolution;
+      color: $color-dim;
+      font-weight: 400;
+    }
+  }
+
+  &__divider {
+    width: 280px;
+    height: 1px;
+    margin-left: 20px;
+    background-color: $color-light-grey;
+  }
+
+  @mixin hover-screen {
+    background-color: $color-light-grey;
+    border-radius: 50px;
+  }
+
+  &__vertical {
+    @include resolution-vertical;
+    @include screen-icon;
+    cursor: pointer;
+
+    &:hover {
+      @include hover-screen;
+    }
+
+    &--selected {
+      @include resolution-vertical-selected;
+      @include screen-icon;
+      cursor: pointer;
+
+      &:hover {
+        @include hover-screen;
+      }
+    }
+
+    &--disabled {
+      @extend .resolution-item__vertical;
+      opacity: 0.3;
+      cursor: default;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+
+  &__horizontal {
+    @include resolution-horizontal;
+    @include screen-icon;
+    margin-left: 37px;
+    cursor: pointer;
+
+    &:hover {
+      @include hover-screen;
+    }
+
+    &--selected {
+      @include resolution-horizontal-selected;
+      @include screen-icon;
+      margin-left: 37px;
+      cursor: pointer;
+
+      &:hover {
+        @include hover-screen;
+      }
+    }
+
+    &--disabled {
+      @extend .resolution-item__horizontal;
+      opacity: 0.3;
+      cursor: default;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+}

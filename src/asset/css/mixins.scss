@@ -1,0 +1,108 @@
+/// 내부 float을 해제하는 헬퍼
+/// @author Nicolas Gallagher
+/// @link http://nicolasgallagher.com/micro-clearfix-hack/ Micro Clearfix
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin align-center-both {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin align-center-vertical {
+  display: flex;
+  align-items: center;
+}
+
+@mixin align-center-horizontal {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin align-between-horizontal {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin ellipse-text {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+
+@mixin screen-icon {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+@mixin thumbnail {
+  background-size: contain;
+  background: black no-repeat center;
+}
+
+@mixin inactive-button {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+@mixin button {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 5px;
+  cursor: pointer;
+}
+
+@mixin panel {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@mixin cubic-transition ($properties, $duration: 450ms) {
+  transition: #{$properties} #{$duration} cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+}
+
+@mixin crop-to-fit {
+  background-image: url(../icon/screen-croptofit.svg);
+  background-size: cover;
+}
+
+@mixin crop-to-fit-focus {
+  background-image: url(../icon/screen-croptofit-focus.svg);
+  background-size: cover;
+}
+
+@mixin fit-to-screen {
+  background-image: url(../icon/screen-fittoscreen.svg);
+  background-size: cover;
+}
+
+@mixin fit-to-screen-focus {
+  background-image: url(../icon/screen-fittoscreen-focus.svg);
+  background-size: cover;
+}
+
+@mixin stretch {
+  background-image: url(../icon/screen-stretch.svg);
+  background-size: cover;
+}
+
+@mixin stretch-focus {
+  background-image: url(../icon/screen-stretch-focus.svg);
+  background-size: cover;
+}

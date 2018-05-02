@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="115" height="80" viewBox="0 0 115 80">
+    <defs>
+        <path id="a" d="M0 0h115v80H0z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <text fill="#999" font-family="OpenSans-Regular, Open Sans" font-size="13">
+            <tspan x="39.319" y="61">Image</tspan>
+        </text>
+        <path fill="#40CABA" d="M48 20h19v19H48z"/>
+        <path fill="#FFF" d="M54 28l4 4 3-2 3 2v4H51v-4z"/>
+    </g>
+</svg>

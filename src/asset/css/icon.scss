@@ -1,0 +1,297 @@
+@mixin resolution-vertical {
+  background-image: url(../icon/screen-vertical.svg);
+  background-size: cover;
+}
+
+@mixin resolution-horizontal {
+  background-image: url(../icon/screen-horizontal.svg);
+  background-size: cover;
+}
+
+@mixin resolution-vertical-selected {
+  background-image: url(../icon/screen-vertical-selected.svg);
+  background-size: cover;
+}
+
+@mixin resolution-horizontal-selected {
+  background-image: url(../icon/screen-horizontal-selected.svg);
+  background-size: cover;
+}
+
+@mixin add-button {
+  background-image: url(../icon/add-button.svg);
+}
+
+@mixin arrow-descending {
+  background-image: url(../icon/dropdown-ascender.svg);
+  background-size: cover;
+  margin-left: 5px;
+}
+
+@mixin arrow-ascending {
+  background-image: url(../icon/dropdown-ascender.svg);
+  background-size: cover;
+  transform: rotate(180deg);
+  margin-left: 5px;
+}
+
+@mixin checkbox-off {
+  background-image: url(../icon/checkbox-off.svg);
+  background-size: cover;
+}
+
+@mixin checkbox-on {
+  background-image: url(../icon/checkbox-on.svg);
+  background-size: cover;
+}
+
+@mixin checkbox-hover {
+  background-image: url(../icon/checkbox-hover.svg);
+  background-size: cover;
+}
+
+@mixin checkbox-off__dimmed {
+  background-image: url(../icon/checkbox-off__dimmed.svg);
+  background-size: cover;
+}
+
+@mixin checkbox-on__dimmed {
+  background-image: url(../icon/checkbox-on__dimmed.svg);
+  background-size: cover;
+}
+
+@mixin warning {
+  background-image: url(../icon/warning.svg);
+  background-size: cover;
+}
+
+@mixin ok {
+  background-image: url(../icon/ok.svg);
+  background-size: cover;
+}
+
+@mixin cross-button {
+  background-image: url(../icon/cross-button.svg);
+  background-size: cover;
+}
+
+@mixin radio-off {
+  background-image: url(../icon/radio-off.svg);
+  background-size: cover;
+}
+
+@mixin radio-on {
+  background-image: url(../icon/radio-on.svg);
+  background-size: cover;
+}
+
+@mixin radio-hover {
+  background-image: url(../icon/radio-hover.svg);
+  background-size: cover;
+}
+
+@mixin radio-off__dimmed {
+  background-image: url(../icon/radio-off__dimmed.svg);
+  background-size: cover;
+}
+
+@mixin radio-on__dimmed {
+  background-image: url(../icon/radio-on__dimmed.svg);
+  background-size: cover;
+}
+
+@mixin calendar-previous {
+  background-image: url(../icon/navi-previous.svg);
+  background-size: cover;
+}
+
+@mixin calendar-next {
+  background-image: url(../icon/navi-next.svg);
+  background-size: cover;
+}
+
+@mixin calendar {
+  background-image: url(../icon/calendar.svg);
+  background-size: cover;
+}
+
+@mixin calendar-dim {
+  background-image: url(../icon/calendar-dim.svg);
+  background-size: cover;
+}
+
+@mixin arrow-left {
+  background-image: url(../icon/arrow-left-white.svg);
+  background-size: cover;
+}
+
+@mixin info-icon {
+  background-image: url(../icon/ico-info.svg);
+  background-size: cover;
+}
+
+@mixin upload-progress {
+  background-image: url(../icon/upload-progress.svg);
+  background-size: cover;
+}
+
+@mixin upload-progress-background {
+  background-image: url(../icon/upload-progress-background.svg);
+  background-size: cover;
+}
+
+@mixin upload-done {
+  background-image: url(../icon/upload-done.svg);
+  background-size: cover;
+}
+
+@mixin upload-fail {
+  background-image: url(../icon/upload-fail.svg);
+  background-size: cover;
+}
+
+@mixin upload-stop {
+  background-image: url(../icon/upload-stop.svg);
+  background-size: cover;
+}
+
+@mixin upload-resume {
+  background-image: url(../icon/upload-resume.svg);
+  background-size: cover;
+}
+
+@mixin cut-column {
+  background-image: url(../icon/ico-action-cut-column.svg);
+  background-size: 25px 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@mixin cut-row {
+  background-image: url(../icon/ico-action-cut-row.svg);
+  background-size: 25px 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@mixin trash-can {
+  background-image: url(../icon/ico-action-delete-w.svg);
+  background-size: 25px 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@mixin bgcolor {
+  background-image: url(../icon/ico-text-bgcolor.svg);
+  background-size: 25px 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@mixin bold {
+  background-image: url(../icon/ico-text-bold.svg);
+  background-size: 25px 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@mixin color {
+  background-image: url(../icon/ico-text-color.svg);
+  background-size: 25px 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@mixin italic {
+  background-image: url(../icon/ico-text-italic.svg);
+  background-size: 25px 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@mixin underline {
+  background-image: url(../icon/ico-text-underline.svg);
+  background-size: 25px 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@mixin image-icon {
+  background-image: url(../icon/ico-image.svg);
+  width: 19px;
+  height: 19px;
+}
+
+@mixin contents-image-icon {
+  background-image: url(../icon/ico-contents-image.svg);
+}
+
+@mixin contents-video-icon {
+  background-image: url(../icon/ico-contents-video.svg);
+}
+
+@mixin contents-imagevideo-icon {
+  background-image: url(../icon/ico-contents-imagevideo.svg);
+}
+
+@mixin contents-url-icon {
+  background-image: url(../icon/ico-contents-url.svg);
+}
+
+@mixin contents-url-icon-symbol {
+  background-image: url(../icon/ico-contents-url-symbol.svg);
+}
+
+@mixin contents-image {
+  @include contents-image-icon;
+  background-size: cover;
+  width: 115px;
+  height: 80px;
+}
+
+@mixin contents-video {
+  @include contents-video-icon;
+  background-size: cover;
+  width: 115px;
+  height: 80px;
+}
+
+@mixin contents-imagevideo {
+  @include contents-imagevideo-icon;
+  background-size: cover;
+  width: 115px;
+  height: 80px;
+}
+
+@mixin contents-url {
+  @include contents-url-icon-symbol;
+  background-size: cover;
+  width: 19px;
+  height: 19px;
+}
+
+@mixin scene {
+  background-image: url(../icon/scene.svg);
+  background-size: cover;
+}
+
+@mixin bounded-cross-button {
+  background-image: url(../icon/bounded-cross-button.svg);
+  background-size: cover;
+}
+
+@mixin navi-next-topbar {
+  background-image: url(../icon/navi-next-topbar.svg);
+  background-size: cover;
+}
+
+@mixin navi-previous-topbar {
+  background-image: url(../icon/navi-previous-topbar.svg);
+  background-size: cover;
+}
+
+@mixin folder-navigator {
+  background-image: url(../icon/contents-folderlist.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}

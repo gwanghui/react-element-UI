@@ -1,0 +1,21 @@
+.checkbox-on {
+  @include checkbox-on;
+}
+
+.checkbox-off {
+  background-color: rgba(255, 255, 255, 0.6);
+  border: solid 1px $color-line-main;
+}
+
+.checkbox:hover .checkbox-off{
+  background-color: rgba(255, 255, 255, 0.8);
+  border: solid 1px $color-light-purple;
+}
+
+.checkbox-on__dimmed {
+  @include checkbox-on__dimmed;
+}
+
+.checkbox-off__dimmed {
+  @include checkbox-off__dimmed;
+}

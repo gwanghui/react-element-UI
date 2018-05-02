@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#FFF" d="M2 3h20v21H2z"/>
+        <path d="M-8-18h40v60H-8z"/>
+        <text fill="#5C65C0" font-family="OpenSans-SemiBold, Open Sans" font-size="16" font-weight="500" transform="translate(-8 -18)">
+            <tspan x="15" y="37">A</tspan>
+        </text>
+    </g>
+</svg>

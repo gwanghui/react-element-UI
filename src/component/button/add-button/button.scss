@@ -1,0 +1,13 @@
+.add-button {
+  @include add-button;
+  @include size(42px);
+  position: relative;
+  border-radius: 50%;
+  transition: all .3s;
+  cursor: pointer;
+  z-index: 10;
+
+  &--rotate {
+    transform: rotate(45deg);
+  }
+}
